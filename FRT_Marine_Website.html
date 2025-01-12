@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FRT Marine - Boat Trailers</title>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+        @font-face {
+            font-family: 'Calibri';
+            src: local('Calibri'), local('Arial');
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            color: #fff;
+            background-color: #000;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: url('sea-7409361_1280.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        header img.logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 118.125px;
+            width: auto;
+        }
+        header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-top: 10px;
+            letter-spacing: 0.05em;
+            color: white;
+        }
+        nav {
+            background: #111;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+            flex: 1;
+        }
+        h2 {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+        }
+        .products {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            background: #111;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            flex: 1 1 calc(30% - 20px);
+            max-width: calc(30% - 20px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .product h3, .product p, .note {
+            font-family: 'Calibri', sans-serif;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+            width: 100%;
+        }
+        a {
+            color: white;
+        }
+        .hidden-section {
+            display: none;
+        }
+        .contact-info {
+            text-align: center;
+            line-height: 2;
+            font-size: 1.1em;
+        }
+        .contact-info .phone {
+            font-family: 'Calibri', sans-serif;
+            font-size: 1.1em;
+        }
+    
+.product p strong {
+    color: #fecd3c !important; /* Updated yellow color */
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+</style>
+<script>
+        function showSection(sectionId) {
+        document.querySelectorAll('section').forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.remove('hidden-section');
+            } else {
+                section.classList.add('hidden-section');
+            }
+        });
+    }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            showSection('products');
+        });
+        </script>
+        
+<style>
+    .details-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #444;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 1em;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+    .details-link:hover {
+        background-color: #666;
+    }
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+</style>
+</head>
+<body>
+<header>
+<img alt="FRT Marine Logo" class="logo" src="Image_20241118112111.jpg"/>
+<h1>FRT Marine</h1>
+<p>High-Quality Boat Trailers for Every Need</p>
+</header>
+<nav>
+<a href="javascript:void(0);" onclick="showSection('products')">Products</a>
+<a href="javascript:void(0);" onclick="showSection('about')">About</a>
+<a href="javascript:void(0);" onclick="showSection('warranty')">Warranty</a>
+<a href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
+</nav>
+<section id="products">
+<h2>Products</h2>
+<div class="products">
+<div class="product">
+<img alt="3.6m Boat Trailer" src="IMG_2042.JPG"/>
+<h3>3.6m Boat Trailer</h3>
+<p>Capacity: 400kg | Suit 2.5 to 3.6m boat<br/>1-7/8" tow ball<br/><strong style="color: #FFFF99;">Price: $1,900 NZD</strong></p>
+<a class="details-link" href="3_6m_Boat_Trailer.html">View Details</a>
+</div>
+<div class="product">
+<img alt="4.7m Boat Trailer" src="4.7m_Boat_Trailer_Final_Fixed_Thumbnail.jpg"/>
+<h3>4.7m Boat Trailer</h3>
+<p>Capacity: 650kg | Suit 4 to 4.7m boat<br/>1-7/8" tow ball<br/>
+<strong style="color: #FFFF99;">Price: $2,200 NZD</strong></p>
+<a class="details-link" href="4_7m_Boat_Trailer.html">View Details</a>
+</div>
+<div class="product">
+<img alt="5.6m Boat Trailer" src="5.6m_Boat_Trailer_thumbnail_400x300.JPG"/>
+<h3>5.6m Boat Trailer</h3>
+<p>Capacity: 850kg | Suit 4.5 to 5.6m boat<br/>50mm tow ball<br/><strong style="color: #FFFF99;">Price: $2,800 NZD</strong></p>
+<a class="details-link" href="5_6m_Boat_Trailer.html">View Details</a>
+
+</div>
+<div class="product">
+<img alt="6.6m Boat Trailer" src="6.6m_Boat_Trailer_thumbnail_400x300.JPG"/>
+<h3>6.4m Boat Trailer</h3>
+<p>Capacity: 2000kg | Suit 5.6 to 6.4m boat<br/>50mm tow ball<br/><strong style="color: #FFFF99;">Price: $4,000 NZD</strong><br/></p>
+<a class="details-link" href="6_4m_Boat_Trailer.html">View Details</a>
+
+<p class="note">* Pre-order</p>
+</div>
+<div class="product">
+<img alt="8.6m Boat Trailer" src="8.6m_Boat_Trailer_thumbnail_400x300.jpg"/>
+<h3>8.6m Boat Trailer</h3>
+<p>Capacity: 3500kg | Suit 7.5m to 8m boat<br/>50mm tow ball<br/><strong style="color: #FFFF99;">Price: $8,000 NZD</strong></p>
+<a class="details-link" href="8_6m_Boat_Trailer.html">View Details</a>
+
+<p class="note">* Pre-order</p>
+</div>
+<div class="product">
+<img alt="New Heavy Duty Rigid Inflatable Boat" src="New Heavy Duty Rigid Inflatable Boat.jpg"/>
+<h3>New Heavy Duty Rigid Inflatable Boat</h3>
+<p>4mm aluminium alloy | Double deck hull<br/>Mahler 1.2mm heavy PVC weld seam<br/><strong style="color: #FFFF99;">Price: $15,000 NZD</strong></p>
+</div>
+</div>
+</section>
+
+<section id="about" class="hidden-section">
+    <h2>About</h2>
+    <p>We specialize in providing high-quality boat trailers for the New Zealand market. We import top-of-the-line trailers from China, carefully assembling them here in New Zealand to ensure the best possible performance and durability for our customers. Our team is dedicated to delivering reliable, strong, and well-crafted trailers designed to handle New Zealand’s unique conditions.</p>
+    <p>We understand the importance of a safe, secure, and efficient trailer for transporting your boat, which is why we source only the best materials and craftsmanship. Whether you’re a recreational boater or a professional, our trailers are built to meet your needs, offering exceptional value and peace of mind.</p>
+    <p>Let us help you get your boat to the water with confidence.</p>
+    <img src="IMG_1619.JPG" alt="Boat Trailers" style="width:100%; margin-top:20px; border-radius:10px;">
+</section>
+
+<section class="hidden-section" id="warranty">
+<h2>Warranty &amp; Refund Policy</h2>
+<p>
+        FRT Ltd offers a 3-Year Structural Frame Warranty and 1-Year Electrical Component Warranty on all trailers sold.
+        The warranty period is valid from the date of the original purchase and is subject to FRT Ltd’s warranty terms and conditions.
+        Additional warranty details can be found in the trailer product description.
+    </p>
+<h3>Warranty Terms &amp; Conditions</h3>
+<p>
+        FRT Ltd Warranty covers all products sold against defective workmanship or materials used under normal use for the period specified. 
+        If a fault or defect arises in the product within the warranty period, the product is to be returned to FRT Ltd.
+    </p>
+<p>
+        FRT Ltd will not be held responsible for shipping and transportation expenses to or from their premises. Proof of purchase is required, and warranties are not transferrable.
+    </p>
+<h3>Warranty Process</h3>
+<p>Our standard warranty process is as follows. All warranty claims are treated on a case-by-case basis, and we do our best to resolve issues efficiently.</p>
+<ol>
+<li>Contact FRT Ltd for warranty authorization and provide all relevant information, including photos and proof of purchase.</li>
+<li>
+            If the products are deemed to be faulty or defective due to defective workmanship or materials, FRT Ltd at their discretion will either:
+            <ul>
+<li>Repair the product using new or refurbished parts of an equivalent standard</li>
+<li>Exchange the product with a product of similar condition, performance, and reliability of the original</li>
+</ul>
+</li>
+</ol>
+<h3>The Warranty Does Not Cover</h3>
+<ul>
+<li>Damage caused due to misuse or abuse of the product, accident, or external influences</li>
+<li>Improper maintenance</li>
+<li>Repairs required due to normal wear and tear</li>
+<li>The person or persons submitting the warranty claim are not the original purchaser</li>
+<li>Repairs or alterations made or attempted by others</li>
+</ul>
+<h3>Freight Damage/Missing Parts</h3>
+<p>Freight damage or missing parts must be reported to us within 24 hours of delivery.</p>
+<h3>Exchange or Refund Policy</h3>
+<p>
+        FRT Ltd offers a 14-day refund on all trailers, providing the product is returned to its original condition and has not been used or damaged in any way.
+        FRT Ltd will not be held responsible for shipping and transportation expenses to or from their premises. Any goods returned damaged or used will not be accepted for refund or exchange.
+    </p>
+<p>
+        Refunds are normally processed within fourteen (14) working days. Refunds will be paid by bank transfer to your nominated account. 
+        If your trailer is faulty, this policy does not apply; instead, you will be eligible for a remedy under the warranty policy as detailed above.
+    </p>
+<h3>More Information</h3>
+<p>If you have an issue relating to your order, please contact FRT Ltd to provide your order number and all relevant details.</p>
+</section>
+<section class="hidden-section" id="contact">
+<h2>Contact</h2>
+<div class="contact-info">
+<p>Email: <a href="mailto:sales@frtmarine.co.nz">sales@frtmarine.co.nz</a></p>
+<p class="phone">Phone: 0278866016</p>
+<p>Address: Pakuranga Heights, Auckland, New Zealand</p>
+</div>
+</section>
+<footer>
+<p>© 2024 FRT Marine. All rights reserved.</p>
+</footer>
+<!-- Modal Structure -->
+<div class="modal hidden-section" id="detailsModal">
+<div class="modal-content">
+<span class="close" onclick="hideDetails()">×</span>
+<h3 id="modalTitle">3.6m Boat Trailer</h3>
+<div id="modalContent">
+<p><strong>Specifications:</strong></p>
+<ul>
+<li>Overall length: 3.6m</li>
+<li>Overall width: 1.55m</li>
+<li>Tyre size: 155R12LT</li>
+<li>Tow ball size: 1-7/8”</li>
+<li>Max load capacity: 450kg</li>
+<li>Single axle, no brake system</li>
+<li>Suitable for boat length from 2.5m to 3.6m</li>
+</ul>
+<p><strong>Trailer Features:</strong></p>
+<ul>
+<li>Waterproof taillight</li>
+<li>Hot dip galvanized and extra black spray paint to provide extra corrosion resistance</li>
+<li>All wire and cable are connected</li>
+<li>All roller wheels are adjustable to suit most of the boat hull</li>
+<li>Free return if not fit</li>
+</ul>
+<p><strong>Optional Charges:</strong></p>
+<ul>
+<li>$200 - 3 years WOF and 1 year rego (not refundable)</li>
+<li>$200 - One spare tyre without bracket</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Modal Styles -->
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-content {
+        background-color: #111;
+        color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 10px;
+        text-align: left;
+    }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+        color: #fff;
+        text-decoration: none;
+    }
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+</style>
+<!-- Modal JavaScript -->
+<script>
+    function showDetails(trailer) {
+        if (trailer === "3.6m") {
+            document.getElementById("modalTitle").innerText = "3.6m Boat Trailer";
+            document.getElementById("detailsModal").style.display = "flex";
+        }
+    }
+
+    function hideDetails() {
+        document.getElementById("detailsModal").style.display = "none";
+    }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            showSection('products');
+        });
+        </script>
+        
+</body>
+</html>
