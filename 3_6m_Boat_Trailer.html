@@ -47,11 +47,14 @@
         max-width: 500px;
         flex-shrink: 0;
         margin-bottom: 20px;
+        overflow: hidden; /* 防止圖片超出邊界 */
     }
     .carousel img {
         width: 100%;
+        height: auto; /* 保持圖片的比例 */
         border-radius: 10px;
         cursor: pointer;
+        object-fit: cover; /* 這樣可以確保圖片不會被拉伸 */
     }
     .carousel .prev, .carousel .next {
         position: absolute;
@@ -312,4 +315,3 @@
 
 </body>
 </html>
-
