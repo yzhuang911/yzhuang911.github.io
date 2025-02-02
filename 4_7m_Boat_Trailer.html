@@ -34,7 +34,7 @@
     .container {
         display: flex;
         gap: 20px;
-        flex-wrap: wrap;  
+        flex-wrap: wrap;
         margin: 30px auto;
         max-width: 1200px;
         background-color: #fff;
@@ -47,9 +47,13 @@
         flex: 1;
         max-width: 500px;
         margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .carousel img {
         width: 100%;
+        max-width: 100%;
         border-radius: 10px;
         cursor: pointer;
     }
@@ -126,7 +130,7 @@
     .button {
         display: inline-block;
         background: #000;
-        color: #FFB800;
+        color: #fff;
         padding: 10px 40px;
         border-radius: 50px;
         text-decoration: none;
@@ -182,7 +186,7 @@
         text-decoration: underline;
     }
 
-
+    /* RWD Media Queries */
     @media (max-width: 1024px) {
         header h1 {
             font-size: 2.5rem;
@@ -193,6 +197,12 @@
         }
         .carousel {
             max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .carousel .prev, .carousel .next {
+            font-size: 20px;
+            width: 35px;
+            height: 35px;
         }
         .details h3 {
             font-size: 1.8rem;
@@ -247,22 +257,22 @@
 </head>
 <body>
 
-
+<!-- Header -->
 <header>
     <h1>4.7m Boat Trailer</h1>
     <p>Performance & Durability</p>
 </header>
 
-
+<!-- Content with Image and Details -->
 <div class="container">
-
+    <!-- Image Section -->
     <div class="carousel">
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <img id="carouselImage" src="Image_20241203121011.jpg" alt="4.7m Boat Trailer" onclick="openFullscreen(this.src)"/>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 
-
+    <!-- Details Section -->
     <div class="details">
         <h3>Specifications</h3>
         <p><span class="highlight">Price:</span> <span class="highlight">$2,200 NZD</span></p>
@@ -274,6 +284,7 @@
         <p><strong>Axle:</strong> Single axle, no brake system</p>
         <p><strong>Boat length compatibility:</strong> 3.8m to 4.7m</p>
 
+        <!-- Trailer Features -->
         <div class="features">
             <h3>Trailer Features</h3>
             <ul>
@@ -291,20 +302,16 @@
     </div>
 </div>
 
-
+<!-- Fullscreen Image Modal -->
 <div class="fullscreen-modal" id="fullscreenModal">
     <span class="close" onclick="closeFullscreen()">&times;</span>
     <img id="fullscreenImage" src="" alt="Zoomed Image"/>
 </div>
 
-
+<!-- Footer -->
 <footer>
-    
-    <a href="index.html" class="button">Home</a>
-   <a href="index.html#Warranty" class="button">Warranty</a>
-    <a href="index.html#Contact" class="button">Contact Us</a>
-    <a href="index.html#About" class="button">About Us</a>
     <p>&copy; 2024 FRT Marine. All Rights Reserved.</p>
+    <a href="index.html" class="button">Back to Home</a>
 </footer>
 
 <script>
@@ -327,7 +334,5 @@
     }
 </script>
 
-
 </body>
 </html>
-
