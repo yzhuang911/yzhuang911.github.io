@@ -44,16 +44,17 @@
     }
     .carousel {
         position: relative;
+        flex: 1;
         max-width: 500px;
-        flex-shrink: 0;
         margin-bottom: 20px;
-        overflow: hidden; 
+        overflow: hidden;
+    }
     .carousel img {
         width: 100%;
-        height: auto; 
+        height: auto;
         border-radius: 10px;
         cursor: pointer;
-        object-fit: cover; 
+        object-fit: cover;
     }
     .carousel .prev, .carousel .next {
         position: absolute;
@@ -83,6 +84,7 @@
     }
     .details {
         flex: 1;
+        min-width: 300px;
     }
     .details h3 {
         font-size: 2rem;
