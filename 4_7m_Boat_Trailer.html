@@ -33,8 +33,8 @@
     }
     .container {
         display: flex;
-        align-items: center;
         gap: 20px;
+        flex-wrap: wrap;  
         margin: 30px auto;
         max-width: 1200px;
         background-color: #fff;
@@ -44,8 +44,9 @@
     }
     .carousel {
         position: relative;
+        flex: 1;
         max-width: 500px;
-        flex-shrink: 0;
+        margin-bottom: 20px;
     }
     .carousel img {
         width: 100%;
@@ -80,6 +81,7 @@
     }
     .details {
         flex: 1;
+        min-width: 300px;
     }
     .details h3 {
         font-size: 2rem;
@@ -179,26 +181,88 @@
     .contact-us a:hover {
         text-decoration: underline;
     }
+
+    /* RWD Media Queries */
+    @media (max-width: 1024px) {
+        header h1 {
+            font-size: 2.5rem;
+        }
+        .container {
+            flex-direction: column;
+            padding: 10px;
+        }
+        .carousel {
+            max-width: 100%;
+        }
+        .details h3 {
+            font-size: 1.8rem;
+        }
+        .details p {
+            font-size: 1rem;
+        }
+        .features li {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2rem;
+        }
+        header p {
+            font-size: 1rem;
+        }
+        .carousel .prev, .carousel .next {
+            font-size: 20px;
+            width: 35px;
+            height: 35px;
+        }
+        .details h3 {
+            font-size: 1.6rem;
+        }
+        .details p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 1.8rem;
+        }
+        .carousel {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .details h3 {
+            font-size: 1.4rem;
+        }
+        .details p {
+            font-size: 0.9rem;
+        }
+        .features li {
+            font-size: 0.9rem;
+        }
+    }
 </style>
 </head>
 <body>
 
-<!-- Header -->
+
 <header>
     <h1>4.7m Boat Trailer</h1>
     <p>Performance & Durability</p>
 </header>
 
-<!-- Content with Image and Details -->
+
 <div class="container">
-    <!-- Image Section -->
+
     <div class="carousel">
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <img id="carouselImage" src="Image_20241203121011.jpg" alt="4.7m Boat Trailer" onclick="openFullscreen(this.src)"/>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 
-    <!-- Details Section -->
+
     <div class="details">
         <h3>Specifications</h3>
         <p><span class="highlight">Price:</span> <span class="highlight">$2,200 NZD</span></p>
@@ -210,7 +274,6 @@
         <p><strong>Axle:</strong> Single axle, no brake system</p>
         <p><strong>Boat length compatibility:</strong> 3.8m to 4.7m</p>
 
-        <!-- Trailer Features -->
         <div class="features">
             <h3>Trailer Features</h3>
             <ul>
@@ -228,16 +291,17 @@
     </div>
 </div>
 
-<!-- Fullscreen Image Modal -->
+
 <div class="fullscreen-modal" id="fullscreenModal">
     <span class="close" onclick="closeFullscreen()">&times;</span>
     <img id="fullscreenImage" src="" alt="Zoomed Image"/>
 </div>
 
-<!-- Footer -->
+
 <footer>
-    <p>&copy; 2024 FRT Marine. All Rights Reserved.</p>
+    
     <a href="index.html" class="button">Back to Home</a>
+    <p>&copy; 2024 FRT Marine. All Rights Reserved.</p>
 </footer>
 
 <script>
@@ -260,10 +324,7 @@
     }
 </script>
 
-<div class="contact-us">
-    <p>Contact Us: <a href="mailto:sales@frtmarine.co.nz">sales@frtmarine.co.nz</a></p>
-    <p>Phone: <a href="tel:0278866016">0278866016</a></p>
-</div>
 
 </body>
 </html>
+
