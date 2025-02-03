@@ -165,17 +165,16 @@
             text-decoration: underline;
         }
 
-        /* Media Queries for Mobile */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                align-items: flex-start; /* Left align the text */
+                align-items: flex-start; 
             }
             .image-container {
                 max-width: 100%;
             }
             .details {
-                text-align: left; /* Align text to the left for mobile */
+                text-align: left; 
                 width: 100%;
             }
             .details h3 {
@@ -183,11 +182,11 @@
             }
         }
 
-        /* Media Queries for Tablet and Larger Screens */
+        
         @media (min-width: 769px) {
             .container {
                 flex-direction: row;
-                align-items: center; /* Vertically center the content */
+                align-items: center;
             }
             .image-container {
                 width: 50%;
@@ -195,27 +194,27 @@
             }
             .details {
                 width: 50%;
-                text-align: left; /* Align text to the left for desktop */
+                text-align: left; 
             }
         }
     </style>
 </head>
 <body>
 
-<!-- Header -->
+
 <header>
     <h1>8.6m Boat Trailer</h1>
     <p>Performance & Durability</p>
 </header>
 
-<!-- Content with Image and Details -->
+
 <div class="container">
-    <!-- Image Section -->
+ 
     <div class="image-container">
         <img src="83788d4e2510047e5b1bf4422684770.jpg" alt="8.6m Boat Trailer" onclick="openFullscreen(this.src)"/>
     </div>
 
-    <!-- Details Section -->
+  
     <div class="details">
         <h3>Specifications</h3>
         <p><span class="highlight">Price:</span> <span class="highlight">$8,000 NZD</span></p>
@@ -227,7 +226,7 @@
         <p><strong>Axle:</strong> Triple axle, hydraulic brake system</p>
         <p><strong>Boat length compatibility:</strong> 7m to 8.5m</p>
 
-        <!-- Trailer Features -->
+      
         <div class="features">
             <h3>Trailer Features</h3>
             <ul>
@@ -246,13 +245,7 @@
     </div>
 </div>
 
-<!-- Fullscreen Image Modal -->
-<div class="fullscreen-modal" id="fullscreenModal">
-    <span class="close" onclick="closeFullscreen()">&times;</span>
-    <img id="fullscreenImage" src="" alt="Zoomed Image"/>
-</div>
 
-<!-- Footer -->
 <footer>
     <p>&copy; 2024 FRT Marine. All Rights Reserved.</p>
     <a href="index.html" class="button">Back to Home</a>
