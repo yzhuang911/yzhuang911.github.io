@@ -33,8 +33,8 @@
     }
     .container {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         gap: 20px;
         margin: 30px auto;
         max-width: 1200px;
@@ -42,6 +42,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         padding: 20px;
+        flex-wrap: wrap; /* For responsive design */
     }
     .image-container img {
         width: 100%;
@@ -160,30 +161,86 @@
     .contact-us a:hover {
         text-decoration: underline;
     }
+
+    /* RWD Media Queries */
+    @media (max-width: 1024px) {
+        header h1 {
+            font-size: 2.5rem;
+        }
+        .container {
+            flex-direction: column;
+            padding: 10px;
+        }
+        .details h3 {
+            font-size: 1.8rem;
+        }
+        .details p {
+            font-size: 1rem;
+        }
+        .features li {
+            font-size: 1rem;
+        }
+        .image-container img {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2rem;
+        }
+        header p {
+            font-size: 1rem;
+        }
+        .details h3 {
+            font-size: 1.6rem;
+        }
+        .details p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 1.8rem;
+        }
+        .container {
+            flex-direction: column;
+            padding: 10px;
+        }
+        .details h3 {
+            font-size: 1.4rem;
+        }
+        .details p {
+            font-size: 0.9rem;
+        }
+        .features li {
+            font-size: 0.9rem;
+        }
+    }
 </style>
 </head>
 <body>
 
-<!-- Fullscreen Image Modal -->
+
 <div class="fullscreen-modal" id="fullscreenModal">
     <span class="close" onclick="closeFullscreen()">&times;</span>
     <img id="fullscreenImage" src="" alt="Zoomed Image"/>
 </div>
 
-<!-- Header -->
+
 <header>
     <h1>6.4m Boat Trailer</h1>
     <p>Performance & Durability</p>
 </header>
 
-<!-- Content with Image and Details -->
+
 <div class="container">
-    <!-- Image Section -->
+   
     <div class="image-container">
         <img src="6.6m_Boat_Trailer_thumbnail_400x300.JPG" alt="6.4m Boat Trailer" onclick="openFullscreen(this.src)"/>
     </div>
 
-    <!-- Details Section -->
     <div class="details">
         <h3>Specifications</h3>
         <p><span class="highlight">Price:</span> <span class="highlight">$4,000 NZD</span></p>
@@ -195,7 +252,7 @@
         <p><strong>Axle:</strong> Double axle, mechanical brake system</p>
         <p><strong>Boat length compatibility:</strong> 5.6m to 6.4m</p>
 
-        <!-- Trailer Features -->
+      
         <div class="features">
             <h3>Trailer Features</h3>
             <ul>
@@ -214,7 +271,7 @@
     </div>
 </div>
 
-<!-- Footer -->
+
 <footer>
     <p>&copy; 2024 FRT Marine. All Rights Reserved.</p>
     <a href="index.html" class="button">Back to Home</a>
@@ -230,11 +287,6 @@
         document.getElementById("fullscreenModal").style.display = "none";
     }
 </script>
-
-<div class="contact-us">
-    <p>Contact Us: <a href="mailto:sales@frtmarine.co.nz">sales@frtmarine.co.nz</a></p>
-    <p>Phone: <a href="tel:0278866016">0278866016</a></p>
-</div>
 
 </body>
 </html>
