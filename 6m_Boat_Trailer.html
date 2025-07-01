@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>6m Boat Trailer</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+    header {
+        background: linear-gradient(to bottom, #000, #1a1a1a);
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+    header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        color: #ddd;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 30px auto;
+        max-width: 1200px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+    }
+    .carousel {
+        position: relative;
+        max-width: 500px;
+        flex-shrink: 0;
+    }
+    .carousel img {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .carousel .prev, .carousel .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+    .carousel .prev {
+        left: 10px;
+    }
+    .carousel .next {
+        right: 10px;
+    }
+    .carousel .prev:hover, .carousel .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .details {
+        flex: 1;
+    }
+    .details h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .details p {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    .highlight {
+        color: #FFB800;
+        font-weight: bold;
+    }
+    .features {
+        margin-top: 20px;
+    }
+    .features ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .features li {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: #000;
+        display: flex;
+        align-items: center;
+    }
+    .features li::before {
+        content: '✔';
+        color: #000;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+    .button {
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        padding: 10px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+    .button:hover {
+        background: #444;
+    }
+    .fullscreen-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    .fullscreen-modal img {
+        max-width: 90%;
+        max-height: 90%;
+        margin: auto;
+    }
+    .fullscreen-modal .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+</style>
+
+<style>
+    .contact-us {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-family: 'Montserrat', sans-serif;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+    .contact-us a {
+        color: #FFB800;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .contact-us a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>6m Boat Trailer</h1>
+    <p>Performance & Durability</p>
+</header>
+
+<!-- Content with Image and Details -->
+<div class="container">
+    <!-- Image Section -->
+    <div class="carousel">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <img id="carouselImage" src="6m.JPG" alt="6m Boat Trailer" onclick="openFullscreen(this.src)"/>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Details Section -->
+    <div class="details">
+        <h3>Specifications</h3>
+        <p><span class="highlight">Price:</span> <span class="highlight">$3,200 NZD</span></p>
+        <p><strong>Overall length:</strong> 6m</p>
+        <p><strong>Overall width:</strong> 2.2m</p>
+        <p><strong>Tyre size:</strong> 185R14LT</p>
+        <p><strong>Tow ball size:</strong> 50mm</p>
+        <p><strong>Max load capacity:</strong> 1200kg</p>
+        <p><strong>Axle:</strong> Single axle, no brake system</p>
+        <p><strong>Boat length compatibility:</strong> 5.4m to 6m</p>
+
+        <!-- Trailer Features -->
+        <div class="features">
+            <h3>Trailer Features</h3>
+            <ul>
+                <li>Waterproof taillight</li>
+                <li>Hot dip galvanized and extra black spray paint for corrosion resistance</li>
+                <li>All wire and cable are connected</li>
+                <li>Adjustable roller wheels to fit most boat hulls</li>
+                <li>Free return if not fit</li>
+            </ul>
+        </div>
+
+        <h3>Optional Charges</h3>
+        <p>$200 - 3 years WOF and 1 year rego (non-refundable)</p>
+        <p>$200 - One spare tyre without bracket</p>
+    </div>
+</div>
+
+
+<div class="fullscreen-modal" id="fullscreenModal">
+    <span class="close" onclick="closeFullscreen()">×</span>
+    <img id="fullscreenImage" src="" alt="Zoomed Image"/>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 FRT Marine. All Rights Reserved.</p>
+    <a href="FRT_Marine_Website.html" class="button">Back to Home</a>
+</footer>
+
+<script>
+    const images = ["61.JPG", "62.JPG", "63.JPG", "64.JPG", "65.JPG"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        document.getElementById("carouselImage").src = images[currentIndex];
+    }
+
+    function openFullscreen(src) {
+        const modal = document.getElementById("fullscreenModal");
+        document.getElementById("fullscreenImage").src = src;
+        modal.style.display = "flex";
+    }
+
+    function closeFullscreen() {
+        document.getElementById("fullscreenModal").style.display = "none";
+    }
+</script>
+
+
+
+</body>
+</html>
