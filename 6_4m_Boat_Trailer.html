@@ -238,7 +238,7 @@
 <div class="container">
    
     <div class="image-container">
-        <img src="6.6m_Boat_Trailer_thumbnail_400x300.JPG" alt="6.4m Boat Trailer" onclick="openFullscreen(this.src)"/>
+        <img src="6.4m01.JPG" alt="6.4m Boat Trailer" onclick="openFullscreen(this.src)"/>
     </div>
 
     <div class="details">
@@ -278,11 +278,20 @@
 </footer>
 
 <script>
+    const images = ["6.4m01.JPG", "6.4m02.JPG", "6.4m03.JPG", "6.4m04.JPG", "6.4m05.JPG", "6.4m06.JPG", "6.4m07.JPG"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        document.getElementById("carouselImage").src = images[currentIndex];
+    }
+
     function openFullscreen(src) {
         const modal = document.getElementById("fullscreenModal");
         document.getElementById("fullscreenImage").src = src;
         modal.style.display = "flex";
     }
+
     function closeFullscreen() {
         document.getElementById("fullscreenModal").style.display = "none";
     }
